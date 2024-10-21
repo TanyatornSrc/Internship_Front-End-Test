@@ -90,23 +90,20 @@ const bookingData = [
     return true;
   };
   
-  // ฟังก์ชันตรวจสอบว่าวันที่อยู่ในช่วงสัปดาห์หรือไม่
   const isDateInRange = (date, startOfWeek, endOfWeek) => {
     return date >= startOfWeek && date <= endOfWeek;
   };
   
-  // ฟังก์ชันดึงช่วงวันที่เริ่มและสิ้นสุดของสัปดาห์
   const getWeekRange = (referenceDate, weekOffset = 0) => {
     const startOfWeek = new Date(referenceDate);
-    startOfWeek.setDate(startOfWeek.getDate() - startOfWeek.getDay() + 1 + weekOffset * 7); // ปรับให้เป็นวันจันทร์ของสัปดาห์
+    startOfWeek.setDate(startOfWeek.getDate() - startOfWeek.getDay() + 1 + weekOffset * 7);
     
     const endOfWeek = new Date(startOfWeek);
-    endOfWeek.setDate(startOfWeek.getDate() + 6); // วันสุดท้ายของสัปดาห์ (วันอาทิตย์)
+    endOfWeek.setDate(startOfWeek.getDate() + 6);
     
     return { startOfWeek, endOfWeek };
   };
   
-  // งานที่ 2: ดึงการจองสำหรับวันนี้ สัปดาห์นี้ และสัปดาห์หน้า
   const getBookingsForWeek = (roomId, weekNo) => {
     const today = new Date();
     const { startOfWeek, endOfWeek } = getWeekRange(today, weekNo);
@@ -116,19 +113,14 @@ const bookingData = [
         const bookingStart = toDate(booking.startTime);
         const bookingEnd = toDate(booking.endTime);
   
-        // ตรวจสอบว่าการจองอยู่ในช่วงสัปดาห์ที่ต้องการหรือไม่
         return isDateInRange(bookingStart, startOfWeek, endOfWeek) ||
                isDateInRange(bookingEnd, startOfWeek, endOfWeek) ||
-               (bookingStart < startOfWeek && bookingEnd > endOfWeek); // กรณีที่การจองกินเวลาข้ามสัปดาห์
+               (bookingStart < startOfWeek && bookingEnd > endOfWeek);
       }
       return false;
     });
   };
   
-  // ตัวอย่างการใช้งาน:
-  // ตรวจสอบว่าห้อง A101 ว่างจาก "2019-09-28 15:00:00" ถึง "2019-09-28 16:00:00" หรือไม่
-  console.log(checkAvailability('A101', '2019-09-28 15:00:00', '2019-09-28 16:00:00')); // คาดหวัง: true
-  
-  // ดึงรายการการจองสำหรับห้อง A101 ในสัปดาห์นี้ (weekNo = 0)
-  console.log(getBookingsForWeek('A101', 0)); // คาดหวัง: รายการการจองในสัปดาห์นี้
+  console.log(checkAvailability('A101', '2019-09-28 15:00:00', '2019-09-28 16:00:00')); 
+  console.log(getBookingsForWeek('A101', 0)); 
   
