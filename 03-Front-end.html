@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venue Booking System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section class="row ">
+        <!-- Side bar ====================================== -->
+        <aside class="col-4 bg-side full-height">
+            <div class="row">
+                <header class="header_roomId">
+                    <h1 class="mt-5 ms-5 mb-4">A101</h1>
+                </header>
+            </div>
+            <div class="container_text">
+                <p class="text_side1">Upcoming</p>
+                <div id="upcomingEvents"></div>
+                <p class="text_side2">Monday</p>
+                <p class="text_side3">28 Sep</p>
+                <div class="row mt-5">
+                    <p class="text_time">13:00 - 14:00</p>
+                    <p class="text_title">Lunch with Petr</p>
+                </div>
+                <div class="row mt-2">
+                    <p class="text_time">14:00 - 16:00</p>
+                    <p class="text_title">Sales Weekly Meeting</p>
+                </div>
+                <div class="row mt-2">
+                    <p class="text_time">16:00 - 18:00</p>
+                    <p class="text_title">Anastasia Website Warroom</p>
+                </div>
+            </div>
+        </aside>
+        <!-- Main ====================================== -->
+        <main class="col-8 bg-white">
+            <!-- Navs and tabs ====================================== -->
+            <div class="row bg-gray">
+                <div class="container_nav">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">THIS WEEK</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">NEXT WEEK</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">WHOLE MONTH</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Details time and title ====================================== -->
+            <!-- <div class="event_container"> -->
+            <!-- <div class="line"></div> -->
+            <!-- <div id="eventDetails" class="mt-4" style="margin-left: 4%;"> -->
+                <div class="row">
+                    <div class="container_header mt-5">
+                        <div class="header_event">Today (Mon, 28 Sep)</div>
+                    </div>
+                    <div class="container_event mt-4" style="margin-left: 4%;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                            <circle cx="5" cy="5" r="5" fill="#3DC7D2" />
+                        </svg>
+                        <p class="event_time">13:00 - 14:00</p>
+                        <p class="event_title">Lunch with Petr</p>
+                    </div>
+                    <div class="container_event" style="margin-left: 4%;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                            <circle cx="5" cy="5" r="5" fill="#23CF5F" />
+                        </svg>
+                        <p class="event_time">14:00 - 16:00</p>
+                        <p class="event_title">Sales Weekly Meeting</p>
+                    </div>
+                    <div class="container_event mt-5" style="margin-left: 4%;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                            <circle cx="5" cy="5" r="5" fill="#F3814A" />
+                        </svg>
+                        <p class="event_time">16:00 - 18:00</p>
+                        <p class="event_title">Anastasia Website Warroom</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="container_header mt-5">
+                        <div class="header_event">Tomorrow (Tue, 29 Sep)</div>
+                    </div>
+                    <div class="container_event mt-4" style="margin-left: 4%;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                            <circle cx="5" cy="5" r="5" fill="#3DC7D2" />
+                        </svg>
+                        <p class="event_time">13:00 - 14:00</p>
+                        <p class="event_title">One-on-one Session</p>
+                    </div>
+                    <div class="container_event" style="margin-left: 4%;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                            <circle cx="5" cy="5" r="5" fill="#23CF5F" />
+                        </svg>
+                        <p class="event_time">16:00 - 18:00</p>
+                        <p class="event_title">UGC Sprint Planning</p>
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+        </main>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

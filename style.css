@@ -1,0 +1,136 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.bg-side {
+    background-color: #46529D;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.header_roomId {
+    color: #ffff;
+    background-color: #2EBAEE;
+    /* width: 400px; */
+    margin-left: 15%;
+}
+
+.container_text {
+    margin-left: 12%;
+}
+
+.text_side1 {
+    color: #ffff;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 20%;
+    margin-bottom: 10%;
+}
+
+.text_side2 {
+    color: #ffff;
+    opacity: 0.5;
+    font-size: 48px;
+    font-weight: 200;
+}
+
+.text_side3 {
+    color: #ffff;
+    font-size: 48px;
+    font-weight: 200;
+    margin-top: -5%;
+}
+
+.text_time {
+    color: #ffff;
+    opacity: 0.5;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.text_title {
+    color: #ffff;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: -4%;
+}
+
+.bg-gray {
+    background-color: #EFEEEC;
+}
+
+.container_nav {
+    margin-top: 7%;
+    margin-bottom: 8px;
+}
+
+.nav-link {
+    color: #000000;
+    position: relative;
+    font-style: normal;
+    font-weight: 400;
+    padding: 10px 40px;
+}
+
+.nav-link:hover {
+    color: #000000;
+    font-weight: medium;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 3px;
+    background-color: #707FDD;
+    bottom: -8px;
+    left: 36%;
+}
+
+.bg-white {
+    background-color: #ffff;
+}
+
+.container_header {
+    background-color: #F7F7F7;
+    border: 1px solid #ECECEC;
+}
+
+.header_event {
+    color: #787878;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    padding: 10px;
+    margin-left: 8%;
+}
+
+.event_container {
+    position: relative;
+}
+
+.line {
+    border-left: 1px solid #ECECEC;
+    height: 650px;
+    position: absolute;
+    margin-left: 44px;
+}
+
+.event_time {
+    color: #787878;
+    font-size: 14px;
+    font-weight: 400;
+    display: inline-block;
+    margin-left: 35px;
+}
+
+.event_title {
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: -16px;
+    margin-left: 50px;
+}

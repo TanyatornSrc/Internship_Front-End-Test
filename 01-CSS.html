@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>01 - CSS Test</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .container_image {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 4px;
+            /* == Image are aligned on left and right edges == */
+            /* padding: 0; */
+            /* == Container has 4% padding from left-right edge == */
+            padding: 0 4%;
+        }
+
+        .container_image img {
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container_image" id="ContainerImage"></div>
+    <script>
+        fetch('https://picsum.photos/v2/list')
+            .then(response => response.json())
+            .then(image => {
+                const container = document.getElementById('ContainerImage');
+                image.forEach(image => {
+                    const img = document.createElement('img');
+                    img.src = image.download_url;
+                    container.appendChild(img);
+                });
+            })
+            .catch(err => console.error('Error fetch image:', err));
+    </script>
+</body>
+
+</html>
